@@ -11,6 +11,17 @@ import Chart from 'chart.js/auto'
     { year: 2016, count: 28 },
   ];
 
+  // here I import our data from csv
+  const dfd = require("danfojs-node")
+
+  dfd.read_csv("data/node_1_node_status_over_time.csv").then(df => {
+    // df is now a DataFrame object and you can perform operations on it
+})
+.catch(err => {
+    console.log(err)
+})
+
+
   new Chart(
     document.getElementById('acquisitions'),
     {
