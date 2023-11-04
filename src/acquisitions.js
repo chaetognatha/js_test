@@ -19,11 +19,19 @@ import Chart from 'chart.js/auto'
         labels: data.map(row => row.year),
         datasets: [
           {
-            label: 'Acquisitions by year',
+            label: 'I don\'t understand',
             data: data.map(row => row.count)
           }
         ]
-      }
+      },
+      options: {
+        plugins: {
+            title: {
+                display: true,
+                text: 'Hello World'
+            }
+        }
+    }
     }
   );
 })();
